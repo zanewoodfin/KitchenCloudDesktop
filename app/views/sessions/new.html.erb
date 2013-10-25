@@ -1,0 +1,7 @@
+<% provide :title, 'Login' %>
+
+<%= simple_form_for @session_form, url: sessions_path do |f| %>
+  <%= f.input :identifier %>
+  <%= f.input :password %>
+  <%= f.submit "Login" %>
+<% end %>
