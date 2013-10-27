@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-    redirect_to users_path if signed_in?
+    redirect_to root_path if signed_in?
     @session_form = SessionForm.new
   end
 
@@ -11,12 +11,26 @@ class SessionsController < ApplicationController
       user = User.find_by_identifier(@session_form.identifier)
       sign_in(user) if user.try(:authenticate, @session_form.password)
     end
-    redirect_to  signed_in? ? users_path : root_url
+    respond_to do |format|
+      format.html do
+        redirect_to  signed_in? ? root_url : login_path 
+      end
+      format.js do
+        render 'sessions/sign_in_out'
+      end
+    end
   end
 
   def destroy
     sign_out
-    redirect_to root_url
+    respond_to do |format|
+      format.html do
+        redirect_to root_url
+      end
+      format.js do
+        render 'sessions/sign_in_out'
+      end
+    end
   end
 
 private

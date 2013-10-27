@@ -1,0 +1,4 @@
+var list = $('ul#menu-primary-navigation');
+$('.sign-form').hide();
+list.children('li').last().remove();
+list.append('<%= j render(partial: 'layouts/sign_in_out_link') %>');

@@ -6,13 +6,14 @@ $ ->
 
   $('.welcome-msg').addClass 'hidden'
   
-  $('.menu-sign-in').click (e)->
+  $(document).on 'click', '.menu-sign-in', (e)->
     $('.menu-sign-in').addClass 'active'
     $('.menu-home, .menu-get-the-app, .menu-community').removeClass 'active'
     $('.sign-form').show()
     false
   $(document).click (e)->
-    hide_sign_form()
+    unless $(e.target).closest('div.sign-form').length > 0
+      hide_sign_form()
   
   if screen.width <= 400
     $(document).on 'click', '.menu-sign-in', (e)->

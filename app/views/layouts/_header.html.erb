@@ -24,13 +24,11 @@
           <li class="menu-custom">
             <a href="#">Custom</a>
           </li>
-          <li class="sign-in menu-sign-in">
-            <a href="#">Sign-In</a>
-          </li>
+          <%= render 'layouts/sign_in_out_link' %>
         </ul>
       </nav>
       <div class="sign-form dropdown-menu">
-        <%= form_for @session_form, url: new_session_path, remote: true do |f| %>
+        <%= form_for @session_form, url: login_path, remote: true do |f| %>
           <%= render 'sessions/fields', f: f %>
         <% end %>
       </div>
