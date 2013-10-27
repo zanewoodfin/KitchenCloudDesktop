@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
     end
     respond_to do |format|
       format.html do
-        redirect_to  signed_in? ? root_url : login_path 
+        redirect_to  signed_in? ? root_url : new_user_path 
       end
       format.js do
         render 'sessions/sign_in_out'

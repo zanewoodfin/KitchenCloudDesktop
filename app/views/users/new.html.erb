@@ -1,0 +1,69 @@
+<%= form_for @session_form, url: login_path, html: { class: "sign-in-landing",
+   style: "float: left; width: 40%; padding-right: 20px; border-right: 1px solid #CCC" } do |f|
+%>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :identifier, "Username" %><br/>
+        <%= f.text_field :identifier, size: '40' %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :password, "Password" %><br/>
+        <%= f.password_field :password, size: '40' %>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        <%= f.submit name: "sign-in", value: "Let Me In", class: "sign-in-BTN" %>
+      </td>
+    </tr>
+  </table>
+<% end %>
+
+<%= form_for @user, html: { class: "sign-up-landing", style: "float: right; width: 50%;" } do |f| %>
+  <table>
+    <tr>
+      <td>
+        <%= f.label :first_name, "First Name" %>
+        <%= f.text_field :first_name, size: "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :last_name, "Last Name" %>
+        <%= f.text_field :last_name, size: "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :email, "Email Address" %>
+        <%= f.text_field :email, size: "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :username, "Username" %>
+        <%= f.text_field :username, size: "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password, size: "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= f.label :password_confirmation, "Password Confirmation" %>
+        <%= f.password_field :password_confirmation, size: "30" %>
+      </td>
+    </tr>
+    <tr>
+      <td align="right">
+        <%= f.submit name: "sign-up", value: "All Access Pass" %>
+      </td>
+    </tr>
+  </table>
+<% end %>
