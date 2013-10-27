@@ -1,0 +1,39 @@
+<header>
+  <header class="banner navbar navbar-default navbar-static-top" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to "#" do %>
+          <%= image_tag "logo.png", width: "auto", :'max-width' => "165", height: "45", border: "0" %>
+        <% end %>
+        <div class="welcom-message hidden"></div>
+      </div>
+      <nav class="collapse navbar-collapse" role="navigation">
+        <ul id="menu-primary-navigation" class="nav navbar-nav">
+          <li class="menu-home">
+            <a href="#">Home</a>
+          </li>
+          <li class="menu-get-the-app">
+            <a href="#">Get the App</a>
+          </li>
+          <li class="menu-custom">
+            <a href="#">Custom</a>
+          </li>
+          <li class="sign-in menu-sign-in">
+            <a href="#">Sign-In</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="sign-form dropdown-menu">
+        <%= form_for @session_form, url: new_session_path, remote: true do |f| %>
+          <%= render 'sessions/fields', f: f %>
+        <% end %>
+      </div>
+    </div>
+  </header>
+</header>

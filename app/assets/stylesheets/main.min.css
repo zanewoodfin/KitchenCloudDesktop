@@ -5257,7 +5257,7 @@ div.forgot a {
 	color: #699c8b;
 }
 
-.sign-form form input[type="button"] {
+.sign-form form input[type="submit"] {
 	width: 100%;
 	background-color: #699c8b;
 	clear: both;

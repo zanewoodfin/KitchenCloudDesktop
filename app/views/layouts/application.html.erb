@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>KitchenCloudDesktop</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<!--[if lt IE 7]>     <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang='en'> <![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie9 lt-ie8" lang='en'> <![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie9" lang='en'> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang='en'> <!--<![endif]-->
 
-<%= yield %>
+  <head>
+    <%= render 'layouts/head' %>
+  </head>
 
-</body>
+  <body>
+    <%= render 'layouts/header' %>
+
+    <!--[if lt IE 7]><div class="alert alert-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots</div><![endif]-->
+
+    <div class="wrap container" role="document">
+      <div class="content row">
+        <% if content_for? :sidebar %>
+          <!--aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
+            <?php include roots_sidebar_path(); ?>
+          </aside--><!-- /.sidebar -->
+        <% end %>
+        <!--div class="main <?php echo roots_main_class(); ?> page-content" role="main">
+          <?php include roots_template_path(); ?>
+        </div--><!-- /.main -->
+      </div><!-- /.content -->
+    </div><!-- /.wrap -->
+    <%= yield %>
+
+  </body>
 </html>
