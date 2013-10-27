@@ -26,7 +26,7 @@ html {
 	font-family:sans-serif;
 	-webkit-text-size-adjust:100%;
 	-ms-text-size-adjust:100%;
-	background-image:url(../img/background_tiles.jpg)
+	background-image:url(/assets/background_tiles.jpg)
 }
 body {
 	margin:0
@@ -5355,7 +5355,7 @@ div.forgot a {
 	padding-left: 10px;
 }
 .account-social span {
-	background-image: url(../img/social-sprite.png);
+	background-image: url(/assets/social-sprite.png);
 	background-size: 115px;
 	overflow: hidden;
 	width: 25px;
