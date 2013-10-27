@@ -1,0 +1,9 @@
+<% if signed_in? %>
+<li class="sign-out menu-sign-out">
+  <%= link_to "Sign-Out", logout_path, remote: true %>
+<% else %>
+<li class="sign-in menu-sign-in">
+  <a href="#">Sign-In</a>
+<% end %>
+</li>
+

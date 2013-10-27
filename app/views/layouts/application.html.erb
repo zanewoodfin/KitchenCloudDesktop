@@ -8,7 +8,7 @@
     <%= render 'layouts/head' %>
   </head>
 
-  <body>
+  <body class="home page page-template page-template-template-front_page-php">
     <%= render 'layouts/header' %>
 
     <!--[if lt IE 7]><div class="alert alert-warning">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.', 'roots</div><![endif]-->
@@ -16,16 +16,17 @@
     <div class="wrap container" role="document">
       <div class="content row">
         <% if content_for? :sidebar %>
-          <!--aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
-            <?php include roots_sidebar_path(); ?>
+          <aside class="sidebar col-sm-4" role="complementary">
+            <%= yield :sidebar %>
           </aside--><!-- /.sidebar -->
+          <div class="main col-sm-8 page-content" role="main">
+        <% else %>
+          <div class="main col-sm-12 page-content" role="main">
         <% end %>
-        <!--div class="main <?php echo roots_main_class(); ?> page-content" role="main">
-          <?php include roots_template_path(); ?>
+          <%= yield %>
         </div--><!-- /.main -->
       </div><!-- /.content -->
     </div><!-- /.wrap -->
-    <%= yield %>
 
   </body>
 </html>
