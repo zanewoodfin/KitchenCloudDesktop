@@ -1,0 +1,35 @@
+<table>
+  <tbody>
+    <tr>
+      <td class="username">
+        <%= f.label :identifier, "Username" %>
+        <%= f.text_field :identifier %>
+      </td>
+    </tr>
+    <tr>
+      <td class="password">
+        <%= f.label :password, "Password" %>
+        <%= f.password_field :password %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="remember">
+          <input type="checkbox" /><span>Remember me</span>
+        </div>
+      </td>
+      <td>
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <%= f.submit value: "SIGN IN", class: "sign-in-BTN" %>
+      <div class='create-account'>
+        or
+        <%= link_to 'Create an account', '#' %>
+      </div>
+    </tr>
+  </tbody>
+</table>
