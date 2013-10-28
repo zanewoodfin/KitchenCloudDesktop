@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
 
   def new
     redirect_to root_path if signed_in?
-    @session_form = SessionForm.new
   end
 
   def create

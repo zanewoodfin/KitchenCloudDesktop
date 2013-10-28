@@ -1,0 +1,56 @@
+<% content_for :sidebar do %>
+  <%= render 'users/sidebar' %>
+<% end %>
+
+<h2>Account Settings for <%= "#{@user.first_name} #{@user.last_name}" %></h2>
+  
+  <h4 style="margin-top: 40px;">Personal Information</h4>
+  
+  <form>
+  <table>
+    <tr>
+      <td>
+        <label>First Name</label><br />
+        <%= @user.first_name %>
+      </td>
+      <td width="20">&nbsp;</td>
+      <td>
+        <label>Last Name</label><br />
+        <%= @user.last_name %>
+      </td>
+      <td width="20">&nbsp;</td>
+      <td>
+        <label>Display Name as</label><br />
+        <select>
+          <option><%= @user.first_name %></option>
+          <option><%= @user.last_name %></option>
+          <option><%= "#{@user.first_name}_#{@user.last_name[0,2]}" %></option>
+          <option><%= "#{@user.first_name} #{@user.last_name}" %></option>
+        </select>
+      </td>
+      <td width="20">&nbsp;</td>
+      <td>
+        <label>Account Email</label><br />
+        <%= @user.email %>
+      </td>
+    </tr>
+  </table>
+  
+  <table class="password-change" style="margin-top: 60px;">
+    <tr>
+      <td>
+    <label>Change password</label><br />
+      <input type="password" />
+      </td>
+      <td width="20">&nbsp;</td>
+      <td>
+      <label>Confirm password</label><br />
+      <input type="password" />
+      </td>
+      <td width="20">&nbsp;</td>
+      <td>
+      <input type="button" value="Change Password" />
+      </td>
+      </tr>
+  </table>
+</form>

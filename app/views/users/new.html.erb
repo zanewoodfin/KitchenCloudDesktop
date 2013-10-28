@@ -1,3 +1,6 @@
+<h3>Join the hundreds of people using KitchenCloud</h3>
+<p>Open up a world of endless wonder and data by either signing-in to your existing account or join us to get the full experience that we have to offer for your mobile device and desktop. We want to work together with you to improve the on the food and ways that we eat. That and we&#8217;re tired of our milk going bad&#8230;</p>
+
 <%= form_for @session_form, url: login_path, html: { class: "sign-in-landing",
    style: "float: left; width: 40%; padding-right: 20px; border-right: 1px solid #CCC" } do |f|
 %>
@@ -29,8 +32,6 @@
         <%= f.label :first_name, "First Name" %>
         <%= f.text_field :first_name, size: "30" %>
       </td>
-    </tr>
-    <tr>
       <td>
         <%= f.label :last_name, "Last Name" %>
         <%= f.text_field :last_name, size: "30" %>
@@ -41,8 +42,6 @@
         <%= f.label :email, "Email Address" %>
         <%= f.text_field :email, size: "30" %>
       </td>
-    </tr>
-    <tr>
       <td>
         <%= f.label :username, "Username" %>
         <%= f.text_field :username, size: "30" %>
@@ -53,15 +52,13 @@
         <%= f.label :password, "Password" %>
         <%= f.password_field :password, size: "30" %>
       </td>
-    </tr>
-    <tr>
       <td>
         <%= f.label :password_confirmation, "Password Confirmation" %>
         <%= f.password_field :password_confirmation, size: "30" %>
       </td>
     </tr>
     <tr>
-      <td align="right">
+      <td colspan="2" align="right">
         <%= f.submit name: "sign-up", value: "All Access Pass" %>
       </td>
     </tr>

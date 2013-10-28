@@ -1,4 +1,12 @@
 var list = $('ul#menu-primary-navigation');
+var welcome = $('.welcome-msg');
+
 $('.sign-form').hide();
+<% if signed_in? %>
+  welcome.html('Welcome back &nbsp;<%= link_to current_user.first_name, current_user %>');
+  welcome.removeClass('hidden');
+<% else %>
+  welcome.addClass('hidden');
+<% end %>
 list.children('li').last().remove();
 list.append('<%= j render(partial: 'layouts/sign_in_out_link') %>');

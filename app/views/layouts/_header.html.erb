@@ -8,15 +8,18 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "#" do %>
+        <%= link_to root_path do %>
           <%= image_tag "logo.png", width: "auto", :'max-width' => "165", height: "45", border: "0" %>
         <% end %>
-        <div class="welcom-message hidden"></div>
+        <span class="welcome-msg<%= ' hidden' unless signed_in? %>">
+          Welcome back
+          &nbsp;<%= link_to(current_user.first_name, current_user) unless current_user.nil? %>
+        </span>
       </div>
       <nav class="collapse navbar-collapse" role="navigation">
         <ul id="menu-primary-navigation" class="nav navbar-nav">
           <li class="menu-home">
-            <a href="#">Home</a>
+            <%= link_to "Home", root_path %>
           </li>
           <li class="menu-get-the-app">
             <a href="#">Get the App</a>

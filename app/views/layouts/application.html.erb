@@ -8,7 +8,7 @@
     <%= render 'layouts/head' %>
   </head>
 
-  <body class="home page page-template page-template-template-front_page-php">
+  <body>
 
     <%= render 'layouts/header' %>
 
@@ -17,15 +17,13 @@
     <div class="wrap container" role="document">
       <div class="content row">
         <% if content_for? :sidebar %>
-          <aside class="sidebar col-sm-4" role="complementary">
+          <aside class="<%= sidebar_classes %>" role="complementary">
             <%= yield :sidebar %>
-          </aside--><!-- /.sidebar -->
-          <div class="main col-sm-8 page-content" role="main">
-        <% else %>
-          <div class="main col-sm-12 page-content" role="main">
+          </aside><!-- /.sidebar -->
         <% end %>
+        <div class="<%= main_classes %>" role="main">
           <%= yield %>
-        </div--><!-- /.main -->
+        </div><!-- /.main -->
       </div><!-- /.content -->
     </div><!-- /.wrap -->
 

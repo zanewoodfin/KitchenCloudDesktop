@@ -4,8 +4,6 @@ $ ->
     $('.menu-sign-in').removeClass 'active'
   hide_sign_form()
 
-  $('.welcome-msg').addClass 'hidden'
-  
   $(document).on 'click', '.menu-sign-in', (e)->
     $('.menu-sign-in').addClass 'active'
     $('.menu-home, .menu-get-the-app, .menu-community').removeClass 'active'
@@ -20,3 +18,4 @@ $ ->
       e.preventDefault
       $('.sign-form').hide()
       window.location = "http://localhost/kitchencloud/create-an-account"
+
