@@ -1,0 +1,106 @@
+<style type="text/css">
+	@import url(../css/global.css);
+	
+	.recipe-card {
+		background: #74b9a2;
+		color: #fff;
+		float: left;
+		height: auto;
+		cursor: pointer;
+		width: 240px;
+	}
+	.recipe-img {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+	}
+	.top-badge {
+		top: 15px;
+		left: 170px;
+		position: absolute;
+		z-index: 2;
+	}
+	.likes {
+		background-image: url(../images/likes.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		width: 75px;
+		height: 35px;
+		position: absolute;
+		top: 150px;
+		left: 10px;
+		z-index: 2;
+	}
+	.likes span {
+		float: right;
+		padding-top: 17px;
+		padding-right: 8px;
+	}
+	#servings,#cooktime,#calories,#number {
+		background: #699c8b;
+		border-bottom: 2px dotted #74b9a2;
+		color: #fff;
+		padding: 10px;
+		width: 240px;
+	}
+	.no-border {
+		border: none;
+	}
+	.recipe-card .information h4 {
+		margin: 10px;
+	}
+	.information h5 {
+		float: left;
+		margin: 0;
+	}
+	.information span {
+		float: right;
+	}
+	#number {
+		text-align: right;
+		padding-right: 10px;
+	}
+</style>
+
+<div class="recipe-card">
+	<div class="top-badge">
+		<img src="../images/top-recipe-badge.png" width="70" height="70" border="0" />
+	</div>
+	<div class="likes">
+		<span>300</span>
+	</div>
+	<div class="recipe-img">
+		<img src="../images/french-toast.jpg" width="240" height="180" border="0" />
+	</div
+	
+	><div class="information">
+		<h4>Overnight Blueberry French Toast</h4>
+		
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td id="servings">
+					<h5>Servings</h5>
+				</td>
+				<td id="number" align="right">
+					01
+				</td>
+			</tr>
+			<tr>
+				<td id="cooktime">
+					<h5>Cooktime</h5>
+				</td>
+				<td id="number" align="right">
+					20&nbsp;<font size="1">min</font>
+				</td>
+			</tr>
+			<tr>
+				<td id="calories" class="no-border">
+					<h5>Calories</h5>
+				</td>
+				<td id="number" align="right">
+					1200
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
