@@ -202,6 +202,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   browser-timezone-rails
   capybara
+  capybara-webkit
   coffee-rails (~> 4.0.0)
   cucumber
   cucumber-rails
