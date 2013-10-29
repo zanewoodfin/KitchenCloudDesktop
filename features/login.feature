@@ -22,6 +22,7 @@ Feature: Login
     And I fill in "Username" with "user_z"
     And I fill in "Password" with "password"
     And I press "SIGN IN"
+    And I click "zane"
     And I click "Sign-Out"
     Then I should see "Sign-In"
 

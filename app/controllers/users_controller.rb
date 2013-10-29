@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :require_login, except: [:new, :create]
-  before_action :set_user
+  before_action :set_user, except: [:new, :create]
 
   def new
     @user = User.new
@@ -16,7 +16,22 @@ class UsersController < ApplicationController
     end
   end
 
+  def display_name
+    respond_to do |format|
+      format.js do
+        if params[:display_name_option]
+          @user.selected_display_name = params[:display_name_option].to_i
+          @user.save
+          sign_in @user
+        end
+      end
+    end
+  end
+
   def show
+  end
+
+  def update
   end
 
 private

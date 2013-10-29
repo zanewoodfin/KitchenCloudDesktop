@@ -21,12 +21,7 @@
       <td width="20">&nbsp;</td>
       <td>
         <label>Display Name as</label><br />
-        <select>
-          <option><%= @user.first_name %></option>
-          <option><%= @user.last_name %></option>
-          <option><%= "#{@user.first_name}_#{@user.last_name[0,2]}" %></option>
-          <option><%= "#{@user.first_name} #{@user.last_name}" %></option>
-        </select>
+        <%= select_tag(:display_name_option, options_for_select(@user.display_name_options, @user.selected_display_name)) %>
       </td>
       <td width="20">&nbsp;</td>
       <td>

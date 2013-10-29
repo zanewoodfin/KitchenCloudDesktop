@@ -3,7 +3,7 @@ var welcome = $('.welcome-msg');
 
 $('.sign-form').hide();
 <% if signed_in? %>
-  welcome.html('Welcome back &nbsp;<%= link_to current_user.first_name, current_user %>');
+  welcome.html('Welcome back &nbsp;<%= link_to current_user.display_name, current_user %>');
   welcome.removeClass('hidden');
 <% else %>
   welcome.addClass('hidden');

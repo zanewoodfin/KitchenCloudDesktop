@@ -13,7 +13,7 @@
         <% end %>
         <span class="welcome-msg<%= ' hidden' unless signed_in? %>">
           Welcome back
-          &nbsp;<%= link_to(current_user.first_name, current_user) unless current_user.nil? %>
+          &nbsp;<%= link_to(current_user.display_name, current_user) unless current_user.nil? %>
         </span>
       </div>
       <nav class="collapse navbar-collapse" role="navigation">

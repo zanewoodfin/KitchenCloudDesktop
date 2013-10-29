@@ -8,6 +8,7 @@ KitchenCloudDesktop::Application.routes.draw do
   get 'logout' => 'sessions#destroy'
   resources :sessions
 
+  patch 'users/display_name' => 'users#display_name'
   resources :users
 
   # Example of regular route:
