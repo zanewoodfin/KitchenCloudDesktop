@@ -4,48 +4,48 @@
 
 <h2>Account Settings for <%= "#{@user.first_name} #{@user.last_name}" %></h2>
   
-  <h4 style="margin-top: 40px;">Personal Information</h4>
-  
-  <form>
-  <table>
-    <tr>
-      <td>
-        <label>First Name</label><br />
-        <%= @user.first_name %>
-      </td>
-      <td width="20">&nbsp;</td>
-      <td>
-        <label>Last Name</label><br />
-        <%= @user.last_name %>
-      </td>
-      <td width="20">&nbsp;</td>
-      <td>
-        <label>Display Name as</label><br />
-        <%= select_tag(:display_name_option, options_for_select(@user.display_name_options, @user.selected_display_name)) %>
-      </td>
-      <td width="20">&nbsp;</td>
-      <td>
-        <label>Account Email</label><br />
-        <%= @user.email %>
-      </td>
-    </tr>
-  </table>
-  
+<h4 style="margin-top: 40px;">Personal Information</h4>
+
+<table>
+  <tr>
+    <td>
+      <label>First Name</label><br />
+      <%= @user.first_name %>
+    </td>
+    <td width="20">&nbsp;</td>
+    <td>
+      <label>Last Name</label><br />
+      <%= @user.last_name %>
+    </td>
+    <td width="20">&nbsp;</td>
+    <td>
+      <label>Display Name as</label><br />
+      <%= select_tag(:display_name_option, options_for_select(@user.display_name_options, @user.selected_display_name)) %>
+    </td>
+    <td width="20">&nbsp;</td>
+    <td>
+      <label>Account Email</label><br />
+      <%= @user.email %>
+    </td>
+  </tr>
+</table>
+
+<%= form_for @password_change_form, url: users_change_password_path, remote: true do |f| %>
   <table class="password-change" style="margin-top: 60px;">
     <tr>
       <td>
-    <label>Change password</label><br />
-      <input type="password" />
+        <%= f.label :password, "Change password" %><br />
+        <%= f.password_field :password %>
       </td>
       <td width="20">&nbsp;</td>
       <td>
-      <label>Confirm password</label><br />
-      <input type="password" />
+        <%= f.label :password_confirmation, "Confirm password" %><br />
+        <%= f.password_field :password_confirmation %>
       </td>
       <td width="20">&nbsp;</td>
       <td>
-      <input type="button" value="Change Password" />
+        <%= f.submit value: "Change Password" %>
       </td>
-      </tr>
+    </tr>
   </table>
-</form>
+<% end %>

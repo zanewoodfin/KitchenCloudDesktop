@@ -41,3 +41,21 @@ Feature: DisplayName
     And I fill in "Password" with "password"
     And I press "SIGN IN"
     Then I should see "Welcome back user_z"
+
+  @javascript
+  Scenario: I should be able to change my password
+    Given I am on the home page
+    When I click "Sign-In"
+    And I fill in "Username" with "email@email.com"
+    And I fill in "Password" with "password"
+    And I press "SIGN IN"
+    And I click "Zane"
+    And I fill in "Change password" with "newpassword"
+    And I fill in "Confirm password" with "newpassword"
+    And I press "Change Password"
+    And I click "Sign-Out"
+    And I click "Sign-In"
+    And I fill in "Username" with "email@email.com"
+    And I fill in "Password" with "newpassword"
+    And I press "SIGN IN"
+    Then I should see "Welcome back Zane"

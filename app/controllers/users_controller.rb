@@ -7,6 +7,17 @@ class UsersController < ApplicationController
     @session_form = SessionForm.new
   end
 
+  def change_password
+    @user.password = params[:password_change_form][:password]
+    @user.password_confirmation = params[:password_change_form][:password_confirmation]
+    @user.save
+    sign_in @user
+    respond_to do |format|
+      format.js do
+      end
+    end
+  end
+
   def create
     @user = User.new(user_params)
     if @user.save
@@ -29,6 +40,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @password_change_form = PasswordChangeForm.new
   end
 
   def update

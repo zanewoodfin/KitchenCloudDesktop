@@ -3,7 +3,7 @@ jQuery ->
   $(document).on 'change', '#display_name_option', ->
     value = $(@).val()
     $.ajax location,
-      type: 'PATCH'
+      type: 'POST'
       data: { display_name_option: value }
       dataType: 'script'
 
