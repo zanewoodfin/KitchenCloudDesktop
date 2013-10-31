@@ -1,0 +1,9 @@
+<%= render 'search' %>
+<table>
+<% @recipes.each do |recipe| %>
+  <tr><td>
+  <%= render 'card', recipe: recipe %>
+  </td></tr>
+<% end %>
+</table>
+<%= will_paginate @recipes %>

@@ -1,0 +1,41 @@
+<div class="recipe-card">
+  <%= content_tag :div, class: "top-badge" do %>
+    <%= image_tag "top-recipe-badge.png", width: "70", height: "70", border: "0" %>
+  <% end if recipe.top_recipe? %>
+  <div class="likes">
+    <span>300</span>
+  </div>
+  <div class="recipe-img">
+    <%= image_tag "french-toast.jpg", width: "240", height: "180", border: "0" %>
+  </div>
+  <div class="information">
+    <h4><%= recipe.title %></h4>
+    
+    <table cellspacing="0" cellpadding="0" border="0">
+      <tr>
+        <td id="servings">
+          <h5>Servings</h5>
+        </td>
+        <td id="number" align="right">
+          <%= recipe.servings %>
+        </td>
+      </tr>
+      <tr>
+        <td id="cooktime">
+          <h5>Cooktime</h5>
+        </td>
+        <td id="number" align="right">
+          <%= recipe.cook_time %>&nbsp;<font size="1">min</font>
+        </td>
+      </tr>
+      <tr>
+        <td id="calories" class="no-border">
+          <h5>Calories</h5>
+        </td>
+        <td id="number" align="right">
+          <%= recipe.calories %>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

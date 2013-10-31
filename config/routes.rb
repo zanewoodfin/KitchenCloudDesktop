@@ -4,10 +4,15 @@ KitchenCloudDesktop::Application.routes.draw do
 
   root 'static_pages#home'
 
+  # recipes
+  resources :recipes
+
+  # sessions
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
   resources :sessions
 
+  # users
   post 'users/display_name' => 'users#display_name'
   post 'users/change_password' => 'users#change_password'
   resources :users

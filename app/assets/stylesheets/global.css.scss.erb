@@ -1,0 +1,110 @@
+@font-face {
+  font-family: "Myriad Regular";
+  src: url('<%= asset_path "MyriadPro-Regular.otf" %>');
+}
+@font-face {
+  font-family: "Myriad Semibold";
+  src: url('<%= asset_path "MyriadPro-Semibold.otf" %>');
+}
+@font-face {
+  font-family: "Myriad Bold";
+  src: url('<%= asset_path "MyriadPro-Bold.otf" %>');
+}
+
+/* Global Properties */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust:100%;
+  -ms-text-size-adjust:100%;
+  background-image: image-url('background_tiles.jpg');
+}
+
+body {
+  font-family: "Myriad Regular", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+a, a:visited {
+  color: #699c8b;
+  text-decoration: none;
+}
+a:hover {
+  color: #699c8b;
+  text-decoration: underline;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 32px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; margin: 0; }
+h5 { font-size: 14px; margin: 0; }
+
+li {
+  list-style-type: none;
+}
+
+/* Form Styles */
+input[type="text"], input[type="password"], input[type="search"], input[type="email"]  {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  height: 30px;
+  padding: 8px;
+}
+
+input[type="submit"], input[type="button"] {
+  cursor: pointer;
+}
+
+.search-BTN {
+  background-color: #74b9a2;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  height: 20px;
+  padding: 5px;
+  position: relative;
+  right: 30px;
+}
+
+.email-submit {
+  background-color: #74b9a2;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  height: 30px;
+  padding: 5px;
+  position: relative;
+  right: 30px;
+}
+
+input[type="button"] {
+  
+}
+
+/* User Generated Styles */
+.hidden {
+  display: none;
+}
+
+ul.pagination {
+  clear: left;
+  font-size: 12px;
+  float: left;
+
+  li {
+    display: inline;
+    padding: 5px;
+
+    &.active {
+      a {
+        background-color: #74b9a2;
+        color: #fff;
+
+        &:hover {
+          background-color: #699C8B;
+        }
+      }
+    }
+  }
+}
+

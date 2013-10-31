@@ -1,0 +1,81 @@
+.advanced-link {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.advanced-link a {
+  font-size: 12px;
+  letter-spacing: 0;
+}
+.advanced-link a span {
+  background-image: image-url('text-drop-arrow.png');
+  background-repeat: no-repeat;
+  background-position: 0px 5px;
+  height: 32px;
+  overflow: hidden;
+  width: 32px;
+}
+
+.advanced-search {
+  font-size: 12px;
+  letter-spacing: 0px;
+}
+.recipe-card {
+  background: #74b9a2;
+  color: #fff;
+  float: left;
+  height: auto;
+  cursor: pointer;
+  width: 240px;
+}
+.recipe-img {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.top-badge {
+  top: 15px;
+  left: 170px;
+  position: absolute;
+  z-index: 2;
+}
+.likes {
+  background-image: image-url('likes.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75px;
+  height: 35px;
+  position: absolute;
+  top: 150px;
+  left: 10px;
+  z-index: 2;
+}
+.likes span {
+  float: right;
+  padding-top: 17px;
+  padding-right: 8px;
+}
+#servings,#cooktime,#calories,#number {
+  background: #699c8b;
+  border-bottom: 2px dotted #74b9a2;
+  color: #fff;
+  padding: 10px;
+  width: 240px;
+}
+.no-border {
+  border: none;
+}
+.recipe-card .information h4 {
+  margin: 10px;
+}
+.information h5 {
+  float: left;
+  margin: 0;
+}
+.information span {
+  float: right;
+}
+#number {
+  text-align: right;
+  padding-right: 10px;
+}
+
