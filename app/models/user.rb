@@ -21,6 +21,8 @@
 class User < ActiveRecord::Base
   has_secure_password
 
+  has_many :likes, dependent: :destroy
+
   USERNAME_REGEX = /\A[a-zA-Z0-9_\-]+\z/
   NAME_REGEX = /\A[a-zA-Z\-]+\z/
 

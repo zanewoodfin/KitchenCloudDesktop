@@ -12,6 +12,13 @@
 #
 
 class Recipe < ActiveRecord::Base
+  has_many :likes, as: :likeable, dependent: :destroy
+  has_many :liked_by, through: :likes
+
+  def like_count
+    likes.count
+  end
+
   def top_recipe?
     true
   end

@@ -30,12 +30,13 @@
 .recipe-img {
   position: relative;
   overflow: hidden;
+  width: 100%;
   z-index: 1;
 }
 .top-badge {
   top: 15px;
   left: 170px;
-  position: absolute;
+  position: relative;
   z-index: 2;
 }
 .likes {
@@ -44,7 +45,7 @@
   background-size: 100%;
   width: 75px;
   height: 35px;
-  position: absolute;
+  position: relative;
   top: 150px;
   left: 10px;
   z-index: 2;

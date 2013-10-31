@@ -3,7 +3,7 @@
     <%= image_tag "top-recipe-badge.png", width: "70", height: "70", border: "0" %>
   <% end if recipe.top_recipe? %>
   <div class="likes">
-    <span>300</span>
+    <span><%= recipe.like_count %></span>
   </div>
   <div class="recipe-img">
     <%= image_tag "french-toast.jpg", width: "240", height: "180", border: "0" %>
